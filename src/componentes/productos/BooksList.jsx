@@ -84,8 +84,7 @@ const BookList = () => {
                   <img src={book.poster} alt={book.title} />
                 </div>
                 <div className='titulo'>
-                  Nombre: {book.title} <br></br>
-                  Autor: {book.author} <br></br>
+                  {book.title} | {book.author} <br></br>
                   Genero: {book.genres} <br></br>
                   Editorial: Sunshine
                 </div>

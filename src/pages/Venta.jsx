@@ -1,5 +1,5 @@
 import NavBar from "../componentes/navbar/Navbar";
-import Crud from "../componentes/crud";
+import Crud from "../componentes/crud/crud";
 
 const Venta = () => {
     return(

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import "../componentes/crud.css"
+import "../crud/crud.css"
 
 const Crud = () => {
   const [books, setBooks] = useState([]);
@@ -32,50 +32,12 @@ const Crud = () => {
     setNewBook({ title: '', author: '', genres: '', price: '', poster: ''});
   };
 
-  const handleUpdateBook = (bookId, updatedBook) => {
-    // Actualizar un libro existente
-    axios.put(`http://localhost:3000/books/${bookId}`, updatedBook)
-      .then(response => {
-        const updatedBooks = books.map(book => (book.id === bookId ? response.data : book));
-        setBooks(updatedBooks);
-      })
-      .catch(error => console.error('Error updating book:', error));
-  };
-
-  const handleDeleteBook = bookId => {
-    // Eliminar (DELETE) un libro existente
-    axios.delete(`http://localhost:3000/books/${bookId}`)
-      .then(response => {
-        if (response.status === 200) {
-          const updatedBooks = books.filter(book => book.id !== bookId);
-          setBooks(updatedBooks);
-        }
-      })
-      .catch(error => console.error('Error deleting book:', error));
-  };
-
   const handlePosterChange = event => {
     setNewBook({ ...newBook, poster: event.target.files[0] });
   };
 
   return (
     <div>
-      <h2>Libros en lista:</h2>
-      <ul>
-        {books.map(book => (
-          <li key={book.id}>
-                <div className='imagen-venta'>
-                  <img className='imagen-venta' src={book.poster} alt={book.title} />
-                </div>
-            <strong>{book.title}</strong> <br></br>
-            {book.author} | {book.genres} | ${book.price} <br></br>
-            <button className="boton-crud" onClick={() => handleUpdateBook(book.id, { title: 'Updated Title', author: 'Updated Author', genre: 'Updated Genre', price: 'Updated Price' })}>
-              Actualizar
-            </button>
-            <button className="boton-crud" onClick={() => handleDeleteBook(book.id)}>Eliminar</button>
-          </li>
-        ))}
-      </ul>
 
       <h2>Crear Nuevo Libro</h2>
       <form>
@@ -84,7 +46,7 @@ const Crud = () => {
           <input
             type="text"
             value={newBook.title}
-            onChange={e => setNewBook({ ...newBook, title: e.target.value })}
+            onChange={e => setNewBook({newBook, title: e.target.value })}
           />
         </label>
         <br />
@@ -93,7 +55,7 @@ const Crud = () => {
           <input
             type="text"
             value={newBook.author}
-            onChange={e => setNewBook({ ...newBook, author: e.target.value })}
+            onChange={e => setNewBook({newBook, author: e.target.value })}
           />
         </label>
         <br />
@@ -102,7 +64,7 @@ const Crud = () => {
           <input
             type="text"
             value={newBook.genres}
-            onChange={e => setNewBook({ ...newBook, genres: e.target.value })}
+            onChange={e => setNewBook({newBook, genres: e.target.value })}
           />
         </label>
         <br />
@@ -111,7 +73,7 @@ const Crud = () => {
           <input
             type="text"
             value={newBook.price}
-            onChange={e => setNewBook({ ...newBook, price: e.target.value })}
+            onChange={e => setNewBook({newBook, price: e.target.value })}
           />
         </label>
         <br />
@@ -120,7 +82,7 @@ const Crud = () => {
           <input 
           type="file"  
           accept="image/*" 
-          onChange={e => setNewBook({ ...newBook, poster: e.target.value})}
+          onChange={e => setNewBook({newBook, poster: e.target.value, handlePosterChange})}
           />
         </label>
         <br/>

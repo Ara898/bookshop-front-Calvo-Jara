@@ -12,7 +12,7 @@ const RutaInexistente = () => {
             <NonExistentRoute></NonExistentRoute>
             <img src={image} className='imagen-error'></img>
             <Link to="/" className='botones-paginacion'>
-            <button className='boton'>Ir a la página principal</button>
+            <button className='boton-redirigir'>Ir a la página principal</button>
             </Link>
         </div>
     )
