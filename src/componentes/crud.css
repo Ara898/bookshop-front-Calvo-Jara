@@ -1,0 +1,19 @@
+.boton-crud{
+    justify-content: center;
+    width: 14%;
+    background-color: #B2967D;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    &:hover {
+        background-color: #c89f7abd;
+        color: #ffffff;
+    }
+  }
+
+.imagen-venta{
+    width: 80px;
+    height: 170px;
+}

@@ -1,0 +1,21 @@
+.nonExistentRoute {
+    text-align:center;
+  }
+
+.botones-paginacion button {
+    background-color: #B2967D;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border-color: transparent;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    &:hover {
+      background-color: #c89f7abd;
+      color: #ffffff;
+    }
+  }
+
+.boton{
+  text-decoration: none;
+}

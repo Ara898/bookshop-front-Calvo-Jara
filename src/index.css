@@ -1,0 +1,24 @@
+body{
+    background: linear-gradient(180deg, #EBDCCB 7.81%, #B2A3B5 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.imagen-inicio{
+    width: 600px;
+    height: 400px;
+    padding: 25px;
+}
+.padre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hijo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
