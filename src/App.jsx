@@ -2,9 +2,10 @@ import './index.css';
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home.jsx';
 import Tienda from './pages/Tienda.jsx';
-import BooksList from './componentes/productos/Bookslist.jsx';
+import BooksList from './componentes/productos/Bookslist';
 import RutaInexistente from './pages/RutaInexistente.jsx';
 import Venta from './pages/Venta.jsx';
+
 
 function App() {
   return (

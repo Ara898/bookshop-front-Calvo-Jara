@@ -1,0 +1,41 @@
+.footer {
+    background-color: #91818A;
+    padding: 20px 0;
+    max-height: 50px;
+    margin-top:15px;
+  }
+  
+  .footer .container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .footer .row {
+    margin-bottom: 20px;
+  }
+  
+  .footer .col{
+    text-align: left;
+    margin: 10;
+  }
+  
+  .footer p {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #222;
+    margin: 5px;
+  }
+  
+  .footer .text-right {
+    text-align: right;
+  }
+  @media (max-width: 768px) {
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .footer p {
+        font-size: 13px;
+    }
+  }

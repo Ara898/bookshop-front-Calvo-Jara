@@ -1,19 +1,71 @@
-.boton-crud{
-    justify-content: center;
-    width: 14%;
-    background-color: #B2967D;
-    padding: 5px 10px;
+.title{
+    text-align: center;
+    margin: 0 auto;
+    font-weight: normal;
     margin: 10px;
+}
+.phrase{
+    font-family: 'Waterfall', cursive;
+    font-size: 50px;
+    font-weight: normal;
+}
+.crud-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #fef6e5;
+    border-radius: 25px;
+    max-width: 500px;
+  }
+  
+  
+  .crud-label {
+    display: block;
+    align-items: center;
+  }
+  
+  .crud-input {
+    width: 300px;
+    padding: 5px;
+  }
+  
+  .crud-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    border-color: transparent;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    &:hover {
-        background-color: #c89f7abd;
-        color: #ffffff;
+    background-color: #B2967D;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .crud-button:hover {
+    background-color: #c89f7abd;
+  }
+  
+  @media (max-width: 480px) {
+    .crud-form {
+      width: 200px;
+      padding: 10;
+      font-size: 15px;    
+    margin: 15%;
+    
+    }
+    .title{
+        font-size: 20px;
+    }
+    .crud-input {
+      width: 200px;
+    }
+    .crud-button {
+        width: 100px;
+        margin: 10%;
+      }
+    .phrase{
+        padding: 20px;
+        font-size: 30px;
+        margin: 0auto;
     }
   }
-
-.imagen-venta{
-    width: 80px;
-    height: 170px;
-}

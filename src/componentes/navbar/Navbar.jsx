@@ -1,17 +1,30 @@
-import React from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.css'
+import './Navbar.css';
 
 function NavBar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-   return (
-     <nav>
-       <h1 className='Navbar'>Write to Us</h1>
-       <NavLink to={"/"}>Inicio</NavLink>
-       <NavLink to={"/tienda"}>Tienda</NavLink>
-       <NavLink to={"/venta"}>Venta</NavLink>
-     </nav>
-   );
- }
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
- export default NavBar;
+  return (
+    <nav>
+      <div className={`menu-toggle ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h1 className='Navbar'>Write to Us</h1>
+      <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+        <NavLink to={"/"} onClick={toggleMobileMenu}>Home</NavLink>
+        <NavLink to={"/tienda"} onClick={toggleMobileMenu}>Store</NavLink>
+        <NavLink to={"/venta"}>Venta</NavLink>
+        <NavLink to={"/Cart"} onClick={toggleMobileMenu}>Cart</NavLink>
+      </div>
+    </nav>
+  );
+}
+
+export default NavBar;
