@@ -1,8 +1,9 @@
-# React + Vite
+Write to us: El lugar donde podes comprar tu libro favorito o darle una segunda vida a ese libro que tenes.
+La misma consume un API que nosotras realizamos e integramos con este front
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Para este proyecto utilizamos varias tecnologías como: html, css, javascript, react, vuejs.
+La misma puede realizar peticiones CRUD
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hecho con amor por:
+Calvo, Florencia
+Jara, Araceli
